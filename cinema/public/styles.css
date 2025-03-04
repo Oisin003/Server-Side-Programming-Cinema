@@ -1,0 +1,559 @@
+/* General Layout */
+body {
+  font-family: Arial, sans-serif;
+  /* Use Arial or sans-serif font */
+  margin: 0;
+  /* Remove default margin */
+  padding: 0;
+  /* Remove default padding */
+  background-color: #f4f4f4;
+  /* Light gray background color for the body */
+}
+
+/* Header Styling */
+header {
+  background-color: #333;
+  /* Dark background for the header */
+  color: #fff;
+  /* White text color for contrast */
+  padding: 10px 0;
+  /* Vertical padding for the header */
+}
+
+/* Navigation Styling */
+nav {
+  display: flex;
+  /* Flexbox layout for the navigation */
+  justify-content: space-between;
+  /* Distribute space between nav items */
+  align-items: center;
+  /* Vertically center the items */
+  padding: 0 20px;
+  /* Add horizontal padding */
+}
+
+nav ul {
+  list-style: none;
+  /* Remove default list bullets */
+  padding: 0;
+  /* Remove padding */
+  margin: 0;
+  /* Remove margin */
+  display: flex;
+  /* Flex layout for the list items */
+}
+
+nav ul li {
+  display: inline;
+  /* Make the list items inline */
+  margin: 0 15px;
+  /* Add spacing between each list item */
+}
+
+nav ul li a {
+  color: white;
+  /* White text color for links */
+  text-decoration: none;
+  /* Remove underlines from links */
+  font-size: 16px;
+  /* Set font size for navigation links */
+}
+
+/* Container for the search input and button */
+.search-container {
+  display: flex;
+  justify-content: flex-start;
+  /* Align items to the left */
+  align-items: center;
+  /* Center vertically */
+  gap: 10px;
+  /* Space between search input and button */
+}
+
+/* Styling for the search input */
+.search-container input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+  /* Adjust width as needed */
+}
+
+/* Styling for the search button */
+.search-container button {
+  padding: 8px 16px;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Change button color on hover */
+.search-container button:hover {
+  background-color: orangered;
+}
+
+/* Main Content Styling */
+main {
+  padding: 20px;
+  /* Add padding around the main content */
+  text-align: center;
+  /* Center the content */
+}
+
+/* Movie Grid Layout */
+.movies-container {
+  display: grid;
+  /* Use CSS grid for the layout */
+  grid-template-columns: repeat(5, 1fr);
+  /* 5 items per row */
+  grid-gap: 20px;
+  /* Space between grid items */
+  margin-top: 20px;
+  /* Space above the grid */
+  grid-template-rows: auto auto;
+  /* Ensure two rows of 5 items each */
+  max-width: 100%;
+  /* Ensure the grid does not exceed the width of its container */
+}
+
+/* Styling for each individual movie box */
+.movie-box {
+  background-color: black;
+  /* Black background for the movie box */
+  color: white;
+  /* White text color for the box */
+  padding: 20px;
+  /* Padding inside each box */
+  border-radius: 8px;
+  /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  /* Subtle shadow for a floating effect */
+  text-align: center;
+  /* Center align text inside the box */
+  transition: transform 0.3s ease;
+  /* Smooth transition for scaling */
+}
+
+.movie-box:hover {
+  transform: scale(1.05);
+  /* Slight zoom effect on hover */
+}
+
+/* Styling for images inside movie boxes */
+.movie-box img {
+  width: 100%;
+  /* Ensure the image takes up full width */
+  height: 200px;
+  /* Set a fixed height */
+  object-fit: cover;
+  /* Cover the space without distortion */
+  border-radius: 8px;
+  /* Rounded corners for the image */
+}
+
+/* Styling for movie title */
+.movie-box h3 {
+  font-size: 18px;
+  /* Set font size for the title */
+  margin: 10px 0;
+  /* Space above and below the title */
+}
+
+/* Styling for movie year or other information */
+.movie-box p {
+  font-size: 14px;
+  /* Smaller font size for the year */
+  color: #bbb;
+  /* Light gray color for the text */
+}
+
+/* Movie Details Page */
+.movie-details {
+  text-align: center;
+  /* Center align the movie details */
+  margin-top: 20px;
+  /* Space above the details */
+}
+
+.movie-details h1 {
+  font-size: 32px;
+  /* Large font size for the title */
+}
+
+.movie-img-details {
+  width: 100%;
+  /* Make the image full-width */
+  max-width: 500px;
+  /* Max width for the image */
+  height: 300px;
+  /* Fixed height */
+  object-fit: cover;
+  /* Cover the space without distortion */
+  border-radius: 8px;
+  /* Rounded corners */
+  margin-top: 20px;
+  /* Space above the image */
+}
+
+.movie-details p {
+  font-size: 18px;
+  /* Font size for movie description */
+  color: #444;
+  /* Darker text color */
+}
+
+.movie-details strong {
+  font-weight: bold;
+  /* Bold text for strong elements */
+}
+
+/* Responsive Layouts */
+@media (max-width: 768px) {
+  .movies-container {
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 items per row on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .movies-container {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 items per row on small screens */
+  }
+}
+
+/* Ensure everything in the left-nav is inline */
+.left-nav {
+  display: flex;
+  /* Use flexbox for layout */
+  align-items: center;
+  /* Vertically align items */
+}
+
+/* Styling for the 'hell' text */
+.hell-text {
+  margin-right: 15px;
+  /* Space between 'hell' and the first list item */
+  font-size: 24px;
+  /* Larger font size for 'hell' */
+  font-weight: bold;
+  /* Bold text for emphasis */
+  color: white;
+  /* White text color */
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333;
+  /* Dark background */
+  color: white;
+  /* White text color */
+  text-align: center;
+  /* Center align the footer text */
+  padding: 20px;
+  /* Add padding for space around the text */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+  /* Smaller font size for footer text */
+}
+
+footer p {
+  margin: 5px 0;
+  /* Space between paragraphs */
+}
+
+/* Admin Link Styling */
+nav ul li a:hover {
+  color: orange;
+  /* Change color on hover */
+}
+
+/* Styling for navigation links */
+nav ul li a {
+  font-size: 16px;
+  /* Set font size */
+  color: white;
+  /* White color for the link */
+  text-decoration: none;
+  /* Remove the underline */
+}
+
+/* Special styling for the Admin link */
+nav ul li a.admin {
+  font-weight: bold;
+  /* Make the Admin link bold */
+  color: #ff6347;
+  /* Tomato color for Admin link */
+}
+
+nav ul li a.admin:hover {
+  color: #e67e00;
+  /* Change color on hover for Admin */
+}
+
+/* Admin Table Styling */
+.admin-table {
+  width: 100%;
+  /* Full width for the table */
+  border-collapse: collapse;
+  /* Collapse table borders */
+  margin-top: 20px;
+  /* Space above the table */
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 10px;
+  /* Padding for table cells */
+  text-align: center;
+  /* Center-align text in cells */
+  border: 1px solid #ccc;
+  /* Light border color for table cells */
+}
+
+.admin-table th {
+  background-color: #f4f4f4;
+  /* Light background for table headers */
+}
+
+/* Common button styling */
+button {
+  display: inline-block;
+  /* Display buttons inline */
+  padding: 8px 16px;
+  /* Padding for the button */
+  font-size: 16px;
+  /* Font size for button text */
+  font-weight: bold;
+  /* Bold text for the button */
+  color: white;
+  /* White text color */
+  border: none;
+  /* Remove default border */
+  border-radius: 4px;
+  /* Rounded corners */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  text-align: center;
+  /* Center align text inside the button */
+  text-decoration: none;
+  /* Remove underline from text */
+  margin: 0 5px;
+  /* Space between buttons */
+}
+
+/* Add Movie Button */
+.add-movie-button {
+  background-color: orange;
+  /* Orange background for add movie button */
+  color: white;
+  /* White text */
+  border: none;
+  /* Remove default border */
+  border-radius: 4px;
+  /* Rounded corners */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  text-align: center;
+  /* Center align text */
+  text-decoration: none;
+  /* Remove underline */
+  padding: 8px 16px;
+  /* Button padding */
+  font-size: 16px;
+  /* Set font size */
+  font-weight: bold;
+  /* Bold text */
+}
+
+/* Update Button */
+.update-button {
+  background-color: #28a745;
+  /* Green background for update button */
+}
+
+.update-button:hover {
+  background-color: #218838;
+  /* Darker green on hover */
+}
+
+.update-button:active {
+  background-color: #1e7e34;
+  /* Even darker green when clicked */
+}
+
+/* Delete Button */
+.delete-button {
+  background-color: #dc3545;
+  /* Red background for delete button */
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+  /* Darker red on hover */
+}
+
+.delete-button:active {
+  background-color: #bd2130;
+  /* Even darker red when clicked */
+}
+
+/* Basic styling for the update form */
+form {
+  max-width: 600px;
+  /* Set a max width for the form */
+  margin: 20px auto;
+  /* Center the form */
+  padding: 20px;
+  /* Padding inside the form */
+  background-color: #f9f9f9;
+  /* Light background color for the form */
+  border-radius: 8px;
+  /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+}
+
+form label {
+  display: block;
+  /* Display labels as block elements */
+  margin-bottom: 8px;
+  /* Space below the label */
+  font-weight: bold;
+  /* Bold label text */
+}
+
+form input {
+  width: 100%;
+  /* Make the input full width */
+  padding: 10px;
+  /* Padding inside input fields */
+  margin-bottom: 15px;
+  /* Space below inputs */
+  border: 1px solid #ccc;
+  /* Light border color */
+  border-radius: 4px;
+  /* Rounded corners for inputs */
+}
+
+form button {
+  padding: 10px 20px;
+  /* Padding for buttons */
+  font-size: 16px;
+  /* Font size for buttons */
+  background-color: #28a745;
+  /* Green background */
+  color: white;
+  /* White text */
+  border: none;
+  /* No border */
+  border-radius: 4px;
+  /* Rounded corners */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+}
+
+form button:hover {
+  background-color: #218838;
+  /* Darker green on hover */
+}
+
+/* View Details Button Styling */
+.view-details-button {
+  display: inline-block;
+  /* Make button inline */
+  padding: 10px 20px;
+  /* Padding for the button */
+  font-size: 16px;
+  /* Font size */
+  background-color: orange;
+  /* Orange background */
+  color: white;
+  /* White text */
+  text-decoration: none;
+  /* Remove underline */
+  border-radius: 4px;
+  /* Rounded corners */
+  text-align: center;
+  /* Center text */
+  transition: background-color 0.3s ease;
+  /* Smooth background transition */
+}
+
+.view-details-button:hover {
+  background-color: #e67e00;
+  /* Darker orange on hover */
+}
+
+.view-details-button:active {
+  background-color: #d35400;
+  /* Even darker orange when clicked */
+}
+
+#search-results {
+  margin-top: 20px;
+}
+
+#search-results div {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+#search-results h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+#search-results p {
+  margin: 5px 0;
+}
+
+#searchForm {
+  display: flex;
+  /* Use flexbox to arrange items in a row */
+  align-items: center;
+  /* Align items vertically in the center */
+  justify-content: center;
+  /* Optional: To center the entire form on the page */
+  gap: 10px;
+  /* Adds space between the form elements */
+}
+
+#searchForm input[type="text"] {
+  padding: 8px;
+  font-size: 14px;
+  width: 200px;
+  /* Set the width of the search bar */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#searchForm select {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#searchForm button {
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #ff7f00;
+  /* Orange color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#searchForm button:hover {
+  background-color: #e66a00;
+  /* Darker orange when hovering */
+}

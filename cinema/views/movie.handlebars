@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tag to specify the character encoding of the document -->
+  <meta charset="UTF-8">
+
+  <!-- Meta tag to ensure the page is responsive on different devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- The title of the page dynamically set to the movie title -->
+  <title>{{movie.title}}</title>
+
+  <!-- Link to an external CSS stylesheet for styling the page -->
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <!-- Header section containing the title of the movie -->
+  <header>
+    <!-- Dynamically display the movie title within an <h1> tag -->
+    <h1>{{movie.title}}</h1>
+  </header>
+
+  <!-- Main content section -->
+  <main>
+    <!-- A container div for the movie details -->
+    <div class="movie-details">
+      
+      <!-- Display the movie image. The source URL is dynamically generated -->
+      <img src="{{movie.image_url}}" alt="{{movie.title}}">
+      
+      <!-- Display the movie's release year -->
+      <p><strong>Year:</strong> {{movie.year}}</p>
+      
+      <!-- Display the actors of the movie -->
+      <p><strong>Actors:</strong> {{movie.actors}}</p>
+      
+      <!-- Display the genre of the movie -->
+      <p><strong>Genre:</strong> {{movie.genre}}</p>
+      
+      <!-- Display the movie's certification  -->
+      <p><strong>Certification:</strong> {{movie.certification}}</p>
+      
+      <!-- Display the age recommendation for the movie -->
+      <p><strong>Age Recommendation:</strong> {{movie.age_recommendation}}</p>
+      
+      <!-- Display the movie's show dates -->
+      <p><strong>Show Dates:</strong> {{movie.show_dates}}</p>
+
+    </div>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tag to specify the character encoding for the document -->
+  <meta charset="UTF-8">
+  
+  <!-- Meta tag to make the page responsive across different screen sizes -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- The title of the page, dynamically set to 'Movie Recommendations' -->
+  <title>Movie Recommendations</title>
+
+  <!-- CSS Styles for the page -->
+  <style>
+    body {
+      font-family: Arial, sans-serif; /* Sets the font for the body */
+      text-align: center; /* Centers the text on the page */
+      padding: 20px; /* Adds padding around the content */
+    }
+    .movie-list {
+      display: grid; /* Uses grid layout to display the movie items */
+      grid-template-columns: repeat(3, 1fr); /* Creates three equal-width columns */
+      gap: 20px; /* Adds space between the grid items */
+      margin-top: 20px; /* Adds top margin to the grid */
+    }
+    .movie-item {
+      padding: 10px; /* Adds padding inside each movie item */
+      border: 1px solid #ccc; /* Adds a light border around each movie item */
+      border-radius: 5px; /* Rounds the corners of the borders */
+      text-align: center; /* Centers the text inside each movie item */
+    }
+    img {
+      max-width: 100%; /* Ensures images fit within their container */
+      height: auto; /* Maintains the aspect ratio of images */
+    }
+  </style>
+</head>
+<body>
+  <!-- Main Title of the page -->
+  <h1>Movie Recommendations</h1>
+
+  <!-- Genre Selection Form -->
+  <form action="/movie-recommendations" method="get">
+    <!-- Label for the genre selection dropdown -->
+    <label for="genre">Choose Genre:</label>
+    
+    <!-- Dropdown for selecting the genre -->
+    <select name="genre" id="genre">
+      <!-- Each option dynamically checks if the genre is selected and highlights it -->
+      <option value="action" {{#if (eq genre 'action')}}selected{{/if}}>Action</option>
+      <option value="comedy" {{#if (eq genre 'comedy')}}selected{{/if}}>Comedy</option>
+      <option value="drama" {{#if (eq genre 'drama')}}selected{{/if}}>Drama</option>
+      <option value="horror" {{#if (eq genre 'horror')}}selected{{/if}}>Horror</option>
+      <option value="romance" {{#if (eq genre 'romance')}}selected{{/if}}>Romance</option>
+      <option value="thriller" {{#if (eq genre 'thriller')}}selected{{/if}}>Thriller</option>
+      <option value="sci-fi" {{#if (eq genre 'sci-fi')}}selected{{/if}}>Sci-Fi</option>
+      <option value="animation" {{#if (eq genre 'animation')}}selected{{/if}}>Animation</option>
+    </select>
+    
+    <!-- Submit button for the form -->
+    <button type="submit">Get Movies</button>
+  </form>
+
+  <!-- Heading for the recommended movies based on the selected genre -->
+  <h2>Genre: {{genre}}</h2>
+
+  <!-- Conditional rendering to check if movies are available for the selected genre -->
+  {{#if movies}}
+    <!-- Movie list container, displayed as a grid -->
+    <div class="movie-list">
+      
+      <!-- Iterates through the movies array and displays each movie item -->
+      {{#each movies}}
+        <div class="movie-item">
+          <!-- Display the movie title -->
+          <h3>{{Title}}</h3>
+          
+          <!-- Display the movie year -->
+          <p>Year: {{Year}}</p>
+          
+          <!-- Display the movie poster image -->
+          <img src="{{Poster}}" alt="{{Title}} Poster" />
+        </div>
+      {{/each}}
+    </div>
+  {{else}}
+    <!-- If no movies are available for the selected genre, display this message -->
+    <p>No movies found for this genre.</p>
+  {{/if}}
+
+</body>
+</html>

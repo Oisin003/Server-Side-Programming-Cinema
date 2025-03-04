@@ -1,0 +1,41 @@
+<h1>Search Movies</h1>
+
+<!-- Search Form -->
+<form id="search-form" method="GET">
+  <fieldset>
+    <!-- Movie Name -->
+    <label for="search-bar">Movie Name:</label>
+    <input 
+      id="search-bar" 
+      type="text" 
+      name="name" 
+      placeholder="Search by movie name" 
+      value="{{name}}"
+    >
+
+    <!-- Genre -->
+    <label for="genre">Genre:</label>
+    <input 
+      id="genre" 
+      type="text" 
+      name="genre" 
+      placeholder="Search by genre" 
+      value="{{genre}}"
+    >
+
+    <!-- Year -->
+    <label for="year">Year:</label>
+    <input 
+      id="year" 
+      type="text" 
+      name="year" 
+      placeholder="Search by year" 
+      value="{{year}}"
+    >
+
+    <button type="submit">Search</button>
+  </fieldset>
+</form>
+
+<!-- Search Results -->
+<div id="search-results"></div>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+<head>
+    <meta charset="UTF-8"> <!-- Specifies the character encoding for the document (UTF-8 supports most characters) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensures the page is responsive and adapts to different screen sizes -->
+    <title>Timetable</title> <!-- The title of the page that appears on the browser tab -->
+    <link rel="stylesheet" href="/styles.css"> <!-- Link to an external CSS file for styling -->
+    <script src="/js/deleteTimetable.js" defer></script>
+    <!-- Links to an external JavaScript file; 'defer' ensures it runs after the HTML is parsed -->
+</head>
+
+<body>
+    <header>
+        <h1>Timetable</h1> <!-- Main header/title of the page -->
+    </header>
+    <main>
+        <!-- Table to display the timetable -->
+        <table class="admin-table"> <!-- The table is styled using the "admin-table" class -->
+            <thead> <!-- The table header section -->
+                <tr> <!-- Table row containing column headers -->
+                    <th>Show Date</th> <!-- Column header for the date of the show -->
+                    <th>Show Time</th> <!-- Column header for the time of the show -->
+                    <th>Movie Title</th> <!-- Column header for the movie title -->
+                    <th>Actions</th> <!-- Column header for actions -->
+                </tr>
+            </thead>
+            <tbody> <!-- Table body section where data will be dynamically inserted -->
+                {{#each showtimes}} <!-- Handlebars template loop that iterates through each 'showtime' object -->
+                <tr> <!-- Each iteration creates a new table row for a showtime -->
+                    <td>{{this.show_date}}</td>
+                    <!-- Displays the 'show_date' property of the current 'showtime' object -->
+                    <td>{{this.show_time}}</td>
+                    <!-- Displays the 'show_time' property of the current 'showtime' object -->
+                    <td>{{this.movie_title}}</td>
+                    <!-- Displays the 'movie_title' property of the current 'showtime' object -->
+                    <td>
+                        <!-- Delete button for removing a specific timetable entry -->
+                        <!-- The 'data-id' attribute stores the ID of the current 'showtime' object -->
+                        <button class="delete-timetable-button" data-id="{{this.id}}">Delete</button>
+                    </td>
+                </tr>
+                {{/each}} <!-- Ends the Handlebars loop -->
+            </tbody>
+        </table>
+    </main>
+</body>
+
+</html>

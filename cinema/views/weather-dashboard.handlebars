@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Defines the character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the page responsive -->
+    <title>Weather Dashboard</title> <!-- Sets the title of the webpage -->
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Sets the font style */
+            text-align: center; /* Centers all text content */
+            padding: 20px; /* Adds padding around the content */
+        }
+        .dashboard {
+            margin: 20px; /* Adds spacing around the dashboard */
+        }
+        .weather-info {
+            font-size: 1.2em; /* Increases font size for readability */
+            margin-top: 20px; /* Adds spacing above the weather info */
+        }
+        .weather-info div {
+            margin: 10px 0; /* Adds spacing between each weather detail */
+        }
+        .form-container {
+            margin: 20px; /* Adds spacing around the form */
+        }
+        input[type="text"] {
+            padding: 10px; /* Adds padding inside the input box */
+            font-size: 1.1em; /* Sets font size for the input */
+            margin-right: 10px; /* Adds spacing between input and button */
+        }
+        button {
+            padding: 10px 20px; /* Adds padding to the button */
+            font-size: 1.1em; /* Sets font size for the button */
+            cursor: pointer; /* Shows a pointer when hovering over the button */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Weather Dashboard</h1> <!-- Main heading for the page -->
+
+    <div class="current-time">
+        <h3>Current Time: {{currentTime}}</h3> <!-- Displays the full current time -->
+        <h4>Short Time Format: {{shortTime}}</h4> <!-- Displays a shorter version of the current time -->
+    </div>
+
+    <div class="form-container">
+        <!-- Form to submit a city name to get weather information -->
+        <form action="/weather-dashboard" method="POST">
+            <label for="city">Enter City:</label> <!-- Label for the city input field -->
+            <input type="text" id="city" name="city" required> <!-- Input box for the city name -->
+            <button type="submit">Get Weather</button> <!-- Submit button -->
+        </form>
+    </div>
+
+    <!-- Check if the city data is available -->
+    {{#if city}}
+        <div class="weather-info">
+            <!-- Displays weather information if a city is provided -->
+            <h2>Weather Information for {{city}}</h2>
+            <div>Temperature: {{temperature}}°C</div> <!-- Displays the temperature -->
+            <div>Condition: {{skytext}}</div> <!-- Displays the sky condition (e.g., sunny, cloudy) -->
+            <div>Humidity: {{humidity}}%</div> <!-- Displays the humidity level -->
+            <div>Wind Speed: {{windSpeed}}</div> <!-- Displays the wind speed -->
+        </div>
+    {{else}}
+        <!-- Message shown if no city is entered -->
+        <p>Please enter a city to get the weather information.</p>
+    {{/if}}
+
+</body>
+</html>

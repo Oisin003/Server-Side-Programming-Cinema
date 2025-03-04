@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- The character encoding is set to UTF-8 for proper text rendering -->
+  <meta charset="UTF-8">
+  
+  <!-- Viewport meta tag for responsive design. Ensures the page adjusts properly on different devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Title of the page. This will appear in the browser's title bar or tab -->
+  <title>Add Movie</title>
+  
+  <!-- Linking to an external stylesheet for the page's design. -->
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+  <!-- Main content section where the form for adding a movie is located -->
+  <main>
+    <!-- Heading for the page, showing the user that they are adding a new movie -->
+    <h1>Add New Movie</h1>
+    
+    <!-- The form for submitting movie details -->
+    <form id="add-movie-form" action="/admin/add-movie" method="POST">
+    
+      <!-- Label and input field for the movie title -->
+      <label for="title">Title</label>
+      <!-- Text input for the movie title. The 'required' attribute makes this field mandatory -->
+      <input type="text" id="title" name="title" required>
+      
+      <!-- Label and input field for the movie year -->
+      <label for="year">Year</label>
+      <!-- Number input for the movie release year. 'required' ensures the field must be filled -->
+      <input type="number" id="year" name="year" required>
+      
+      <!-- Label and input field for the actors in the movie -->
+      <label for="actors">Actors</label>
+      <!-- Text input for actors' names -->
+      <input type="text" id="actors" name="actors" required>
+      
+      <!-- Label and input field for the genre of the movie -->
+      <label for="genre">Genre</label>
+      <!-- Text input for the genre -->
+      <input type="text" id="genre" name="genre" required>
+      
+      <!-- Label and input field for the certification of the movie -->
+      <label for="certification">Certification</label>
+      <!-- Text input for certification (e.g., PG, R) -->
+      <input type="text" id="certification" name="certification" required>
+      
+      <!-- Label and input field for the age recommendation of the movie -->
+      <label for="age_recommendation">Age Recommendation</label>
+      <!-- Text input for age recommendation -->
+      <input type="text" id="age_recommendation" name="age_recommendation" required>
+      
+      <!-- Label and input field for the image URL -->
+      <label for="image_url">Image URL</label>
+      <!-- Text input for the image URL. The movie's poster image or thumbnail -->
+      <input type="text" id="image_url" name="image_url" required>
+      
+      <!-- Submit button to send the form data to the server -->
+      <button type="submit" class="add-button">Add Movie</button>
+    </form>
+  </main>
+</body>
+
+</html>

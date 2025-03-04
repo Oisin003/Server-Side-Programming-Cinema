@@ -1,0 +1,192 @@
+[
+    {
+      "title": "Gladiator",
+      "year": 2000,
+      "actors": "Russell Crowe, Joaquin Phoenix, Connie Nielsen",
+      "genre": "Action",
+      "certification": "R",
+      "age_rating": "15+",
+      "image_url": "/images/gladiator.png",
+      "show_dates": ["2024-12-20", "2024-12-21", "2024-12-22"]
+    },
+    {
+      "title": "Pirates of the Caribbean",
+      "year": 2003,
+      "actors": "Johnny Depp, Keira Knightley, Orlando Bloom",
+      "genre": "Adventure",
+      "certification": "PG-13",
+      "age_rating": "12+",
+      "image_url": "/images/pirates.jpg",
+      "show_dates": ["2024-12-23", "2024-12-24", "2024-12-25"]
+    },
+    {
+      "title": "Star Wars: A New Hope",
+      "year": 1977,
+      "actors": "Mark Hamill, Harrison Ford, Carrie Fisher",
+      "genre": "Sci-Fi",
+      "certification": "PG",
+      "age_rating": "All Ages",
+      "image_url": "/images/starwars.jpg",
+      "show_dates": ["2024-12-26", "2024-12-27", "2024-12-28"]
+    },
+    {
+      "title": "Interstellar",
+      "year": 2014,
+      "actors": "Matthew McConaughey, Anne Hathaway, Jessica Chastain",
+      "genre": "Sci-Fi",
+      "certification": "PG-13",
+      "age_rating": "12+",
+      "image_url": "/images/interstellar.jpg",
+      "show_dates": ["2024-12-29", "2024-12-30", "2024-12-31"]
+    },
+    {
+      "title": "Indiana Jones: Raiders of the Lost Ark",
+      "year": 1981,
+      "actors": "Harrison Ford, Karen Allen, Paul Freeman",
+      "genre": "Adventure",
+      "certification": "PG",
+      "age_rating": "All Ages",
+      "image_url": "/images/indianajones.jpg",
+      "show_dates": ["2024-12-20", "2024-12-21", "2024-12-22"]
+    },
+    {
+      "title": "The Muppets",
+      "year": 2011,
+      "actors": "Jason Segel, Amy Adams, Chris Cooper",
+      "genre": "Comedy",
+      "certification": "PG",
+      "age_rating": "All Ages",
+      "image_url": "/images/muppets.webp",
+      "show_dates": ["2024-12-23", "2024-12-24", "2024-12-25"]
+    },
+    {
+      "title": "The Dark Knight",
+      "year": 2008,
+      "actors": "Christian Bale, Heath Ledger, Aaron Eckhart",
+      "genre": "Action",
+      "certification": "PG-13",
+      "age_rating": "12+",
+      "image_url": "/images/darkknight.jpg",
+      "show_dates": ["2024-12-26", "2024-12-27", "2024-12-28"]
+    },
+    {
+      "title": "Forrest Gump",
+      "year": 1994,
+      "actors": "Tom Hanks, Robin Wright, Gary Sinise",
+      "genre": "Drama",
+      "certification": "PG-13",
+      "age_rating": "12+",
+      "image_url": "/images/forrestgump.jpg",
+      "show_dates": ["2024-12-29", "2024-12-30", "2024-12-31"]
+    },
+    {
+      "title": "The Lion King",
+      "year": 1994,
+      "actors": "Matthew Broderick, Jeremy Irons, James Earl Jones",
+      "genre": "Animation",
+      "certification": "G",
+      "age_rating": "All Ages",
+      "image_url": "/images/lionking.jpg",
+      "show_dates": ["2024-12-20", "2024-12-21", "2024-12-22"]
+    },
+    {
+      "title": "Inception",
+      "year": 2010,
+      "actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page",
+      "genre": "Sci-Fi",
+      "certification": "PG-13",
+      "age_rating": "12+",
+      "image_url": "/images/inception.jpg",
+      "show_dates": ["2024-12-23", "2024-12-24", "2024-12-25"]
+    },
+  {
+    "title": "The Matrix",
+    "year": 1999,
+    "actors": "Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss",
+    "genre": "Sci-Fi",
+    "certification": "R",
+    "age_rating": "15+",
+    "image_url": "/images/matrix.jpg",
+    "show_dates": ["2024-12-30", "2024-12-31", "2025-01-01"]
+  },
+  {
+    "title": "The Shawshank Redemption",
+    "year": 1994,
+    "actors": "Tim Robbins, Morgan Freeman",
+    "genre": "Drama",
+    "certification": "R",
+    "age_rating": "15+",
+    "image_url": "/images/shawshank.jpg",
+    "show_dates": ["2024-12-30", "2024-12-31", "2025-01-01"]
+  },
+  {
+    "title": "The Godfather",
+    "year": 1972,
+    "actors": "Marlon Brando, Al Pacino, James Caan",
+    "genre": "Crime, Drama",
+    "certification": "R",
+    "age_rating": "15+",
+    "image_url": "/images/godfather.jpg",
+    "show_dates": ["2025-01-02", "2025-01-03", "2025-01-04"]
+  },
+  {
+    "title": "The Terminator",
+    "year": 1984,
+    "actors": "Arnold Schwarzenegger, Linda Hamilton, Michael Biehn",
+    "genre": "Action, Sci-Fi",
+    "certification": "R",
+    "age_rating": "15+",
+    "image_url": "/images/terminator.jpg",
+    "show_dates": ["2025-01-05", "2025-01-06", "2025-01-07"]
+  },
+  {
+    "title": "Back to the Future",
+    "year": 1985,
+    "actors": "Michael J. Fox, Christopher Lloyd",
+    "genre": "Adventure, Comedy, Sci-Fi",
+    "certification": "PG",
+    "age_rating": "All Ages",
+    "image_url": "/images/backtothefuture.jpg",
+    "show_dates": ["2025-01-08", "2025-01-09", "2025-01-10"]
+  },
+  {
+    "title": "The Prestige",
+    "year": 2006,
+    "actors": "Christian Bale, Hugh Jackman, Scarlett Johansson",
+    "genre": "Drama, Mystery, Sci-Fi",
+    "certification": "PG-13",
+    "age_rating": "12+",
+    "image_url": "/images/prestige.jpg",
+    "show_dates": ["2025-01-11", "2025-01-12", "2025-01-13"]
+  },
+  {
+    "title": "Jurassic Park",
+    "year": 1993,
+    "actors": "Sam Neill, Laura Dern, Jeff Goldblum",
+    "genre": "Adventure, Sci-Fi, Thriller",
+    "certification": "PG-13",
+    "age_rating": "12+",
+    "image_url": "/images/jurassicpark.jpg",
+    "show_dates": ["2025-01-14", "2025-01-15", "2025-01-16"]
+  },
+  {
+    "title": "Toy Story",
+    "year": 1995,
+    "actors": "Tom Hanks, Tim Allen",
+    "genre": "Animation, Adventure, Comedy",
+    "certification": "G",
+    "age_rating": "All Ages",
+    "image_url": "/images/toystory.jpg",
+    "show_dates": ["2025-01-17", "2025-01-18", "2025-01-19"]
+  },
+  {
+    "title": "Avatar",
+    "year": 2009,
+    "actors": "Sam Worthington, Zoe Saldana, Sigourney Weaver",
+    "genre": "Action, Adventure, Sci-Fi",
+    "certification": "PG-13",
+    "age_rating": "12+",
+    "image_url": "/images/avatar.jpg",
+    "show_dates": ["2025-01-20", "2025-01-21", "2025-01-22"]
+  }
+]

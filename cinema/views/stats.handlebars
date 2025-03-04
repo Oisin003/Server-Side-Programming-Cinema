@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country Stats</title>
+</head>
+<body>
+  <h1>Country Statistics</h1>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Country Name</th>
+        <th>Population</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each countryNames}}
+        <tr>
+          <td>{{this}}</td>
+          <td>{{lookup ../populations @index}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+</body>
+</html>

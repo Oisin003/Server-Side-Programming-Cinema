@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Character encoding for proper text rendering -->
+  <meta charset="UTF-8">
+  <!-- Viewport settings for responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title> <!-- Dynamic title rendered by template engine  -->
+
+  <!-- Link to external CSS file for styling -->
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+  <!-- Header section of the page -->
+  <header>
+    <!-- Navigation bar -->
+    <nav>
+      <ul class="left-nav">
+        <!-- Branding or website name -->
+        <li class="hell-text">Phictiúrlann</li>
+        <!-- Home page link -->
+        <li><a href="/">Home</a></li>
+        <!-- Timetable page link -->
+        <li><a href="/timetable">Timetable</a></li>
+        <!-- Admin page link, visible on all pages -->
+        <li><a href="/admin">Admin</a></li> <!-- Admin link always visible -->
+        {{!-- The following links are commented out. They might be included in some other context --}}
+        {{!-- <li><a href="/stats">Stats</a></li> --}}
+        {{!-- <li><a href="/random-profile">Random Profile</a></li> <!-- New link --> --}}
+        <!-- Joke page link -->
+        <li><a href="/joke">Jokes</a></li>
+        <!-- Weather dashboard link -->
+        <li><a href="/weather-dashboard">Weather</a></li>
+        <!-- Movie recommendations page link -->
+        <li><a href="/movie-recommendations">You Choose</a></li>
+        <!-- Just Out page link -->
+        <li><a href="/generate-timetable">Just Out</a></li>
+      </ul>
+
+      <!-- Search Form section, only included on pages where it's needed -->
+      {{#unless isAdminPage}} <!-- Handlebars conditional: excludes search form on admin pages -->
+      <ul class="right-nav">
+        {{!-- <li class="search-form">
+          <!-- Search form for querying movies -->
+          <form action="/search" method="GET">
+            <!-- Text input for search query, value populated by template -->
+            <input type="text" name="query" placeholder="Search for a movie..." value="{{query}}">
+            <!-- Submit button for initiating the search -->
+            <button type="submit" class="search-button">Search</button>
+          </form>
+        </li> --}}
+        <!-- Search Bar and Button positioned side by side -->
+        <form id="searchForm">
+          <!-- Search Query Input -->
+          <input type="text" name="query" placeholder="Search for a movie..." />
+
+          <!-- Filter Dropdown (removed 'rating' filter) -->
+          <select name="filter">
+            <option value="title">Name</option>
+            <option value="genre">Genre</option>
+            <option value="year">Year</option>
+            <option value="actor">Actor</option>
+            <option value="certification">Certification</option>
+          </select>
+
+          <!-- Submit Button -->
+          <button type="submit">Search</button>
+        </form>
+
+
+
+      </ul>
+      {{/unless}} <!-- End of search form inclusion check -->
+
+    </nav>
+  </header>
+
+  <!-- Main content area of the page -->
+  <main>
+    <!-- Container to display search results -->
+    <div id="movies-container"></div>
+    <!-- This block is dynamically populated by the content from the template engine -->
+    {{{body}}}
+  </main>
+
+  <!-- Footer section -->
+  <footer>
+    <!-- Copyright information -->
+    <p>&copy; 2024 Phictiúrlann. All rights reserved.</p>
+    <!-- Footer credit with designer's name -->
+    <p>Designed by Oisin Gibson</p>
+  </footer>
+  <!-- Include search script -->
+  <script src="/js/searchMovies.js"></script>
+</body>
+
+</html>

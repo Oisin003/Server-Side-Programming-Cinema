@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Define the character encoding to support a wide range of characters -->
+    <meta charset="UTF-8">
+    
+    <!-- Viewport meta tag to ensure the page is responsive across devices, scaling the content appropriately -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title that will appear on the browser tab when this page is open -->
+    <title>Trivia and Joke</title>
+    
+    <!-- Inline CSS to style the page -->
+    <style>
+        /* Global body styling for the page */
+        body {
+            font-family: Arial, sans-serif; /* Set the font of the page */
+            text-align: center; /* Center-align the text */
+            padding: 20px; /* Add padding to the page */
+        }
+        
+        /* Styling for the question section */
+        .question {
+            font-size: 1.5em; /* Increase the font size of the question */
+            margin-bottom: 20px; /* Add space below the question */
+        }
+        
+        /* Styling for the answers section */
+        .answers {
+            font-size: 1.2em; /* Set the font size of the answers */
+        }
+        
+        /* Styling for the answer buttons */
+        .answers button {
+            margin: 5px; /* Add space between buttons */
+            padding: 10px 20px; /* Add padding inside the button */
+            font-size: 1.1em; /* Set the font size of the button text */
+            cursor: pointer; /* Change the cursor to a pointer when hovering over the button */
+        }
+        
+        /* Hover effect on the answer buttons */
+        .answers button:hover {
+            background-color: #f0f0f0; /* Change background color on hover */
+        }
+        
+        /* Styling for the joke section */
+        .joke {
+            font-size: 1.5em; /* Set the font size of the joke text */
+            margin-top: 40px; /* Add space above the joke section */
+        }
+        
+        /* Styling for the result text */
+        .result {
+            font-size: 1.2em; /* Set the font size of the result text */
+            color: green; /* Set the color of the result text to green */
+            margin-top: 20px; /* Add space above the result text */
+        }
+        
+        /* Styling for incorrect answers */
+        .incorrect {
+            color: red; /* Set the color of incorrect answers to red */
+        }
+    </style>
+</head>
+<body>
+    <!-- Joke Section -->
+    <div class="joke">
+        <!-- Heading for the joke section -->
+        <h2>Random Joke:</h2>
+        
+        <!-- Display the setup of the joke, dynamically populated with the 'jokeSetup' variable from the server -->
+        <p><strong>Setup:</strong> {{jokeSetup}}</p>
+        
+        <!-- Display the punchline of the joke, dynamically populated with the 'jokePunchline' variable from the server -->
+        <p><strong>Punchline:</strong> {{jokePunchline}}</p>
+    </div>
+
+    <!-- Line break to separate sections visually -->
+    <br>
+</body>
+</html>

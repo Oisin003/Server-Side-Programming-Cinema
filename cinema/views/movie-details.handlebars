@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tag to specify the character encoding for the document -->
+  <meta charset="UTF-8">
+  
+  <!-- Meta tag to ensure the page is responsive across different devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Title tag dynamically sets the movie title in the browser's tab based on the 'movie.title' variable -->
+  <title>{{movie.title}} - Movie Details</title>
+  
+  <!-- Link to the external CSS file for styling the page -->
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <nav>
+      <!-- Navigation menu with links to the Home, Movies, and Timetable pages -->
+      <ul class="left-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/movies">Movies</a></li>
+        <li><a href="/timetable">Timetable</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content Section -->
+  <main>
+    <!-- Container to display the details of the selected movie -->
+    <div class="movie-details">
+      
+      <!-- Dynamically set the movie title as an H1 element -->
+      <h1>{{movie.title}}</h1>
+      
+      <!-- Dynamically set the movie image using the 'movie.image_url' variable -->
+      <img src="{{movie.image_url}}" alt="{{movie.title}}" class="movie-img-details">
+      
+      <!-- Display the movie year dynamically using the 'movie.year' variable -->
+      <p><strong>Year:</strong> {{movie.year}}</p>
+      
+      <!-- Display the movie genre dynamically using the 'movie.genre' variable -->
+      <p><strong>Genre:</strong> {{movie.genre}}</p>
+      
+      <!-- Display the actors in the movie dynamically using the 'movie.actors' variable -->
+      <p><strong>Actors:</strong> {{movie.actors}}</p>
+      
+      <!-- Display the movie's certification dynamically using the 'movie.certification' variable -->
+      <p><strong>Certification:</strong> {{movie.certification}}</p>
+      
+      <!-- Display the movie's age recommendation dynamically using the 'movie.age_recommendation' variable -->
+      <p><strong>Age Recommendation:</strong> {{movie.age_recommendation}}</p>
+      
+      <!-- Display the show dates of the movie dynamically using the 'movie.show_dates' variable -->
+      <p><strong>Show Dates:</strong> {{movie.show_dates}}</p>
+    </div>
+  </main>
+</body>
+</html>

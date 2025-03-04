@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Timetable</title>
+    <link rel="stylesheet" href="/styles.css"> <!-- Link to your CSS -->
+    <script src="/js/deleteTimetable.js" defer></script> <!-- Link to your JavaScript -->
+
+    <style>
+        /* Styles for the generated timetable table */
+        table.admin-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table.admin-table th, table.admin-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table.admin-table th {
+            background-color: #f4f4f4;
+        }
+
+        /* Styles for the Delete button */
+        .timeTableDelete {
+            background-color: red;   /* Red background */
+            color: white;            /* White text */
+            border: none;            /* Remove border */
+            padding: 10px 20px;      /* Add some padding */
+            font-size: 16px;         /* Increase font size */
+            cursor: pointer;        /* Change cursor to pointer */
+            border-radius: 5px;      /* Rounded corners */
+            transition: background-color 0.3s; /* Smooth transition for hover */
+        }
+
+        /* Optional: Change color on hover */
+        .timeTableDelete:hover {
+            background-color: darkred; /* Darker red when hovered */
+        }
+
+        /* Optional: Change color on click (active state) */
+        .timeTableDelete:active {
+            background-color: crimson; /* Lighter red on active click */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Generated Timetable</h1>
+    </header>
+    <main>
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th>Show Date</th>
+                    <th>Show Time</th>
+                    <th>Movie Title</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each showtimes}}
+                <tr>
+                    <td>{{this.show_date}}</td>
+                    <td>{{this.show_time}}</td>
+                    <td>{{this.movie_title}}</td>
+                    <td>
+                        <button class="timeTableDelete" data-id="{{this.id}}">Delete</button>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

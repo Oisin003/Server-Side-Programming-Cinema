@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+  <meta charset="UTF-8"> <!-- Sets character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes page responsive -->
+  <title>Movies</title> <!-- Page title -->
+  <link rel="stylesheet" href="/styles.css"> <!-- Link to CSS file -->
+</head>
+<body>
+  <main>
+    <div class="movies-container"> <!-- Container for movies -->
+      {{#each movies}} <!-- Loop through movies -->
+        <div class="movie-box"> <!-- Single movie card -->
+          <img src="{{image_url}}" alt="{{title}}"> <!-- Movie image -->
+          <h3>{{title}}</h3> <!-- Movie title -->
+          <p>Year: {{year}}</p> <!-- Movie year -->
+          <p>Genre: {{genre}}</p> <!-- Movie genre -->
+          <a href="/movie/{{id}}" class="view-details-button">View Details</a> <!-- Link to details -->
+        </div>
+      {{/each}} <!-- End of loop -->
+    </div>
+  </main>
+</body>
+</html>
